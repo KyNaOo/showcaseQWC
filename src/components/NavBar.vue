@@ -10,19 +10,22 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <header class="bg-white shadow-sm sticky top-0 z-50">
+  <header class="bg-[#CDBFBF] shadow-sm sticky top-0 z-50">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-20">
         <div class="flex-shrink-0 flex items-center">
           <RouterLink to="/" class="text-xl font-bold text-gray-800">
-            Logo
+            <img
+              src="../../public/logo-removebg-preview.png"
+              class="h-20 w-auto object-contain"
+            />
           </RouterLink>
         </div>
 
         <div class="hidden sm:flex sm:space-x-8 sm:items-center">
           <RouterLink
             to="/"
-            class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+            class="text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors duration-200 font-lexend-exa"
             active-class="text-gray-900 font-semibold"
           >
             Home
@@ -30,21 +33,21 @@ const toggleMenu = () => {
 
           <RouterLink
             to="/about"
-            class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+            class="text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors duration-200 font-lexend-exa"
             active-class="text-gray-900 font-semibold"
           >
             About me
           </RouterLink>
           <RouterLink
             to="/certifications"
-            class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+            class="text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors duration-200 font-lexend-exa"
             active-class="text-gray-900 font-semibold"
           >
             Certifications
           </RouterLink>
           <RouterLink
             to="/contact"
-            class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+            class="text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors duration-200 font-lexend-exa"
             active-class="text-gray-900 font-semibold"
           >
             Contact me
