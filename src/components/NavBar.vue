@@ -4,6 +4,13 @@ import { RouterLink } from "vue-router";
 
 const isOpen = ref(false);
 
+const navItems = [
+  { path: "/", label: "Home" },
+  { path: "/about", label: "About me" },
+  { path: "/certifications", label: "Certifications" },
+  { path: "/contact", label: "Contact me" },
+];
+
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
 };
@@ -22,35 +29,16 @@ const toggleMenu = () => {
           </RouterLink>
         </div>
 
+        <!-- Desktop navigation -->
         <div class="hidden sm:flex sm:space-x-8 sm:items-center">
           <RouterLink
-            to="/"
+            v-for="item in navItems"
+            :key="item.path"
+            :to="item.path"
             class="text-gray-700 px-4 py-2 text-base font-medium rounded-lg transition-all duration-500 font-lexend-exa hover:bg-white hover:shadow-md hover:scale-105"
             active-class="bg-white text-gray-900 font-semibold shadow-md"
           >
-            Home
-          </RouterLink>
-
-          <RouterLink
-            to="/about"
-            class="text-gray-700 px-4 py-2 text-base font-medium rounded-lg transition-all duration-500 font-lexend-exa hover:bg-white hover:shadow-md hover:scale-105"
-            active-class="bg-white text-gray-900 font-semibold shadow-md"
-          >
-            About me
-          </RouterLink>
-          <RouterLink
-            to="/certifications"
-            class="text-gray-700 px-4 py-2 text-base font-medium rounded-lg transition-all duration-500 font-lexend-exa hover:bg-white hover:shadow-md hover:scale-105"
-            active-class="bg-white text-gray-900 font-semibold shadow-md"
-          >
-            Certifications
-          </RouterLink>
-          <RouterLink
-            to="/contact"
-            class="text-gray-700 px-4 py-2 text-base font-medium rounded-lg transition-all duration-500 font-lexend-exa hover:bg-white hover:shadow-md hover:scale-105"
-            active-class="bg-white text-gray-900 font-semibold shadow-md"
-          >
-            Contact me
+            {{ item.label }}
           </RouterLink>
         </div>
 
@@ -63,8 +51,7 @@ const toggleMenu = () => {
           >
             <span class="sr-only">Open main menu</span>
             <svg
-              v-if="!isOpen"
-              class="block h-6 w-6"
+              :class="['block h-6 w-6', isOpen ? 'hidden' : 'block']"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -78,8 +65,7 @@ const toggleMenu = () => {
               />
             </svg>
             <svg
-              v-else
-              class="block h-6 w-6"
+              :class="['block h-6 w-6', !isOpen ? 'hidden' : 'block']"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -100,37 +86,14 @@ const toggleMenu = () => {
       <div v-show="isOpen" class="sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
           <RouterLink
-            to="/"
+            v-for="item in navItems"
+            :key="item.path"
+            :to="item.path"
             class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-700"
             active-class="bg-gray-50 text-gray-900 font-semibold"
             @click="isOpen = false"
           >
-            Home
-          </RouterLink>
-
-          <RouterLink
-            to="/about"
-            class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-700"
-            active-class="bg-gray-50 text-gray-900 font-semibold"
-            @click="isOpen = false"
-          >
-            About me
-          </RouterLink>
-          <RouterLink
-            to="/certifications"
-            class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-700"
-            active-class="bg-gray-50 text-gray-900 font-semibold"
-            @click="isOpen = false"
-          >
-            Certifications
-          </RouterLink>
-          <RouterLink
-            to="/contact"
-            class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-700"
-            active-class="bg-gray-50 text-gray-900 font-semibold"
-            @click="isOpen = false"
-          >
-            Contact me
+            {{ item.label }}
           </RouterLink>
         </div>
       </div>
