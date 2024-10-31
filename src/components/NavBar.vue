@@ -12,7 +12,7 @@ const toggleMenu = () => {
 <template>
   <header class="bg-white shadow-sm sticky top-0 z-50">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16">
+      <div class="flex justify-between h-20">
         <div class="flex-shrink-0 flex items-center">
           <RouterLink to="/" class="text-xl font-bold text-gray-800">
             Logo
@@ -33,7 +33,21 @@ const toggleMenu = () => {
             class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
             active-class="text-gray-900 font-semibold"
           >
-            About us
+            About me
+          </RouterLink>
+          <RouterLink
+            to="/certifications"
+            class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+            active-class="text-gray-900 font-semibold"
+          >
+            Certifications
+          </RouterLink>
+          <RouterLink
+            to="/contact"
+            class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+            active-class="text-gray-900 font-semibold"
+          >
+            Contact me
           </RouterLink>
         </div>
 
@@ -97,7 +111,23 @@ const toggleMenu = () => {
             active-class="bg-gray-50 text-gray-900 font-semibold"
             @click="isOpen = false"
           >
-            About
+            About me
+          </RouterLink>
+          <RouterLink
+            to="/certifications"
+            class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200"
+            active-class="bg-gray-50 text-gray-900 font-semibold"
+            @click="isOpen = false"
+          >
+            Certifications
+          </RouterLink>
+          <RouterLink
+            to="/contact"
+            class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200"
+            active-class="bg-gray-50 text-gray-900 font-semibold"
+            @click="isOpen = false"
+          >
+            Contact me
           </RouterLink>
         </div>
       </div>
