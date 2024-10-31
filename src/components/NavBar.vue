@@ -25,30 +25,30 @@ const toggleMenu = () => {
         <div class="hidden sm:flex sm:space-x-8 sm:items-center">
           <RouterLink
             to="/"
-            class="text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors duration-200 font-lexend-exa"
-            active-class="text-gray-900 font-semibold"
+            class="text-gray-700 px-4 py-2 text-base font-medium rounded-lg transition-all duration-500 font-lexend-exa hover:bg-white hover:shadow-md hover:scale-105"
+            active-class="bg-white text-gray-900 font-semibold shadow-md"
           >
             Home
           </RouterLink>
 
           <RouterLink
             to="/about"
-            class="text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors duration-200 font-lexend-exa"
-            active-class="text-gray-900 font-semibold"
+            class="text-gray-700 px-4 py-2 text-base font-medium rounded-lg transition-all duration-500 font-lexend-exa hover:bg-white hover:shadow-md hover:scale-105"
+            active-class="bg-white text-gray-900 font-semibold shadow-md"
           >
             About me
           </RouterLink>
           <RouterLink
             to="/certifications"
-            class="text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors duration-200 font-lexend-exa"
-            active-class="text-gray-900 font-semibold"
+            class="text-gray-700 px-4 py-2 text-base font-medium rounded-lg transition-all duration-500 font-lexend-exa hover:bg-white hover:shadow-md hover:scale-105"
+            active-class="bg-white text-gray-900 font-semibold shadow-md"
           >
             Certifications
           </RouterLink>
           <RouterLink
             to="/contact"
-            class="text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors duration-200 font-lexend-exa"
-            active-class="text-gray-900 font-semibold"
+            class="text-gray-700 px-4 py-2 text-base font-medium rounded-lg transition-all duration-500 font-lexend-exa hover:bg-white hover:shadow-md hover:scale-105"
+            active-class="bg-white text-gray-900 font-semibold shadow-md"
           >
             Contact me
           </RouterLink>
@@ -101,7 +101,7 @@ const toggleMenu = () => {
         <div class="pt-2 pb-3 space-y-1">
           <RouterLink
             to="/"
-            class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200"
+            class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-700"
             active-class="bg-gray-50 text-gray-900 font-semibold"
             @click="isOpen = false"
           >
@@ -110,7 +110,7 @@ const toggleMenu = () => {
 
           <RouterLink
             to="/about"
-            class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200"
+            class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-700"
             active-class="bg-gray-50 text-gray-900 font-semibold"
             @click="isOpen = false"
           >
@@ -118,7 +118,7 @@ const toggleMenu = () => {
           </RouterLink>
           <RouterLink
             to="/certifications"
-            class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200"
+            class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-700"
             active-class="bg-gray-50 text-gray-900 font-semibold"
             @click="isOpen = false"
           >
@@ -126,7 +126,7 @@ const toggleMenu = () => {
           </RouterLink>
           <RouterLink
             to="/contact"
-            class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200"
+            class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-700"
             active-class="bg-gray-50 text-gray-900 font-semibold"
             @click="isOpen = false"
           >
