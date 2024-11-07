@@ -23,7 +23,7 @@ const toggleMenu = () => {
         <div class="flex-shrink-0 flex items-center">
           <RouterLink to="/" class="text-xl font-bold text-gray-800">
             <img
-              src="../../public/logo-removebg-preview.png"
+              src="../logo-removebg-preview.png"
               class="h-20 w-auto object-contain"
             />
           </RouterLink>

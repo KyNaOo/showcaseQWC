@@ -29,21 +29,21 @@ export default {
           year: 2022,
           description:
             "Demonstrates proficiency in building and deploying secure and scalable applications on the AWS platform.",
-          imagePath: "../public/aws.png",
+          imagePath: "/aws.png",
         },
         {
           title: "Kubernetes Certified Administrator",
           year: 2021,
           description:
             "Validates the skills and knowledge to configure, manage, and operate production-grade Kubernetes clusters.",
-          imagePath: "../public/kubernetes.png",
+          imagePath: "/kubernetes.png",
         },
         {
           title: "Google Cloud Certified Professional",
           year: 2023,
           description:
             "Certifies the ability to design, develop, and manage robust, secure, and scalable solutions on the Google Cloud platform.",
-          imagePath: "../public/aws2.png",
+          imagePath: "/aws2.png",
         },
       ],
     };
