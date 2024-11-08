@@ -38,7 +38,7 @@
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              <span class="text-gray-700 font-medium">info@qindiwu.com</span>
+              <span class="text-gray-700 font-medium">w.qindi@hotmail.fr </span>
             </div>
             <div class="flex items-center space-x-4">
               <svg
@@ -118,7 +118,7 @@
                 ></path>
               </svg>
               <a
-                href="https://www.linkedin.com/in/qindiwu"
+                href="https://www.linkedin.com/in/qindi-wu-547a2aa9/"
                 class="text-gray-700 font-medium hover:text-indigo-500 transition-colors"
                 >LinkedIn</a
               >
