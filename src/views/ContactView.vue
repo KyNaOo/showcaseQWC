@@ -1,3 +1,26 @@
+<script>
+export default {
+  data() {
+    return {
+      name: "",
+      email: "",
+      message: "",
+    };
+  },
+  methods: {
+    sendEmail() {
+      console.log("Sending email:", {
+        name: this.name,
+        email: this.email,
+        message: this.message,
+      });
+      this.name = "";
+      this.email = "";
+      this.message = "";
+    },
+  },
+};
+</script>
 <template>
   <div class="bg-gradient-to-r from-neutral-500 to-neutral-800 py-16">
     <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -5,13 +28,42 @@
         <!-- Contact Information Card -->
         <div class="bg-white shadow-md rounded-lg p-8">
           <h2 class="text-2xl font-bold mb-4">Contact me</h2>
-          <div class="space-y-4"></div>
+          <div class="space-y-4">
+            <label for="name" class="block text-sm font-medium text-gray-700"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              v-model="name"
+              class="mt-1 block w-full shadow-sm text-lg border-2 border-[#CDBFBF] rounded-md p-2"
+            />
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              v-model="email"
+              class="mt-1 block w-full shadow-sm text-lg border-2 border-[#CDBFBF] rounded-md p-2"
+            />
+            <label for="message" class="block text-sm font-medium text-gray-700"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              v-model="message"
+              rows="3"
+              class="mt-1 block w-full shadow-sm text-lg border-2 border-[#CDBFBF] rounded-md p-2"
+            ></textarea>
+          </div>
           <div class="mt-6">
-            <a
+            <button
+              @click.prevent="sendEmail"
               class="bg-[#CDBFBF] hover:bg-gray-200 text-black font-medium py-2 px-4 rounded-md transition-colors"
             >
               Send Email
-            </a>
+            </button>
           </div>
         </div>
 
