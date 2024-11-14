@@ -7,18 +7,6 @@ export default {
       message: "",
     };
   },
-  methods: {
-    sendEmail() {
-      console.log("Sending email:", {
-        name: this.name,
-        email: this.email,
-        message: this.message,
-      });
-      this.name = "";
-      this.email = "";
-      this.message = "";
-    },
-  },
 };
 </script>
 <template>
@@ -28,43 +16,62 @@ export default {
         <!-- Contact Information Card -->
         <div class="bg-white shadow-md rounded-lg p-8">
           <h2 class="text-2xl font-bold mb-4">Contact me</h2>
-          <div class="space-y-4">
-            <label for="name" class="block text-sm font-medium text-gray-700"
-              >Name</label
-            >
-            <input
-              type="text"
-              id="name"
-              v-model="name"
-              class="mt-1 block w-full shadow-sm text-lg border-2 border-[#CDBFBF] rounded-md p-2"
-            />
-            <label for="email" class="block text-sm font-medium text-gray-700"
-              >Email</label
-            >
-            <input
-              type="email"
-              id="email"
-              v-model="email"
-              class="mt-1 block w-full shadow-sm text-lg border-2 border-[#CDBFBF] rounded-md p-2"
-            />
-            <label for="message" class="block text-sm font-medium text-gray-700"
-              >Message</label
-            >
-            <textarea
-              id="message"
-              v-model="message"
-              rows="3"
-              class="mt-1 block w-full shadow-sm text-lg border-2 border-[#CDBFBF] rounded-md p-2"
-            ></textarea>
-          </div>
-          <div class="mt-6">
-            <button
-              @click.prevent="sendEmail"
-              class="bg-[#CDBFBF] hover:bg-gray-200 text-black font-medium py-2 px-4 rounded-md transition-colors"
-            >
-              Send Email
-            </button>
-          </div>
+          <form
+            action="https://formsubmit.co/51b0cec53a1a2cd9ad4c66bbcd406601"
+            method="POST"
+          >
+            <div class="space-y-4">
+              <label for="name" class="block text-sm font-medium text-gray-700"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                v-model="name"
+                class="mt-1 block w-full shadow-sm text-lg border-2 border-[#CDBFBF] rounded-md p-2"
+                required
+              />
+              <input type="text" name="_honey" style="display: none" />
+              <label for="email" class="block text-sm font-medium text-gray-700"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                v-model="email"
+                class="mt-1 block w-full shadow-sm text-lg border-2 border-[#CDBFBF] rounded-md p-2"
+                required
+              />
+              <label
+                for="message"
+                class="block text-sm font-medium text-gray-700"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                v-model="message"
+                name="message"
+                rows="3"
+                class="mt-1 block w-full shadow-sm text-lg border-2 border-[#CDBFBF] rounded-md p-2"
+                required
+              ></textarea>
+              <input
+                type="file"
+                name="attachment"
+                accept="image/png, image/jpeg, application/pdf"
+              />
+            </div>
+            <div class="mt-6">
+              <button
+                type="submit"
+                class="bg-[#CDBFBF] hover:bg-gray-200 text-black font-medium py-2 px-4 rounded-md transition-colors"
+              >
+                Send Email
+              </button>
+            </div>
+          </form>
         </div>
 
         <!-- Follow Me Card -->
