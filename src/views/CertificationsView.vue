@@ -38,13 +38,6 @@ export default {
             "Validates the skills and knowledge to configure, manage, and operate production-grade Kubernetes clusters.",
           imagePath: "/kubernetes.png",
         },
-        {
-          title: "Google Cloud Certified Professional",
-          year: 2023,
-          description:
-            "Certifies the ability to design, develop, and manage robust, secure, and scalable solutions on the Google Cloud platform.",
-          imagePath: "/aws2.png",
-        },
       ],
     };
   },
